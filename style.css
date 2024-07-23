@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style pour l'entête */
+.header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Style pour le container global */
+.container-global {
+    background-image: url(''); /*chemin de l'image */
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.container-global h2 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.container-global p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.container-global .inner-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container-global .inner-container > div {
+    width: 48%;
+}
+
+.container-global .right-container {
+    text-align: right;
+}
+
+.container-global .left-container {
+    text-align: left;
+}
