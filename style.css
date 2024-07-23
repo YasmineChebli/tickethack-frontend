@@ -1,4 +1,6 @@
-body {
+/* Assurez-vous que le corps et le html prennent toute la hauteur */
+html, body {
+    height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -18,12 +20,16 @@ body {
 
 /* Style pour le container global */
 .container-global {
-    background-image: url(''); /*chemin de l'image */
+    background-image: url('https://media.istockphoto.com/id/176957261/fr/photo/voie-ferr%C3%A9e.jpg?s=2048x2048&w=is&k=20&c=qj0KN5yG83iD4xCREmz2NVYNu26TLfnI7hcU5KyP06M='); /*chemin de l'image */
     background-size: cover;
     background-position: center;
-    padding: 60px 20px;
-    text-align: center;
-    color: #ffffff;
+    height: calc(100vh - 52px); /* Hauteur de la fenêtre moins la hauteur de l'en-tête */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #98cf59;
+    padding: 20px;
 }
 
 .container-global h2 {
@@ -40,18 +46,59 @@ body {
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    width: 100%;
 }
 
-.container-global .inner-container > div {
-    width: 48%;
+.container-global .box {
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc transparent */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .container-global .right-container {
-    text-align: right;
+    width: 48%;
+    text-align: left; /* Changement du texte aligné à gauche */
 }
 
 .container-global .left-container {
+    width: 48%;
     text-align: left;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #98cf59;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #86b74e;
+}
+
+#search-results {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

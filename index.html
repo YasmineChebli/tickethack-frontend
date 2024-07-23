@@ -4,31 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tickethack</title>
-    <link rel="stylesheet" href="frontend/styles.css">
+    <link rel="stylesheet" href="style.css"> <!-- Chemin correct vers votre CSS -->
 </head>
 <body>
-    <!-- En-tête -->
     <div class="header">
         <h1>Tickethack</h1>
     </div>
-
-    <!-- Container global -->
     <div class="container-global">
         <h2>Explore the world effortlessly by train</h2>
         <p>Compare, book, and enjoy cheap prices for train tickets: your journey starts on Tickethack.</p>
-        
-        <!-- Conteneurs alignés -->
         <div class="inner-container">
-            <div class="right-container">
-                <!-- Contenu du conteneur droit -->
-                <p>Right aligned content</p>
+            <div class="box right-container">
+                <form id="search-form">
+                    <label for="departure">Depart:</label>
+                    <input type="text" id="departure" name="departure" placeholder="Entez une ville de départ">
+                    <label for="arrival">Arrivée:</label>
+                    <input type="text" id="arrival" name="arrival" placeholder="Entrer une ville d'arrivée">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date">
+                    <button type="submit">Search</button>
+                </form>
             </div>
-            <div class="left-container">
-                <!-- Contenu du conteneur gauche -->
-                <p>Left aligned content</p>
+            <div class="box left-container">
+                <div id="search-results">
+                    <!-- Results will be displayed here -->
+                </div>
             </div>
         </div>
     </div>
-    <script src="script.js"> </script>
 </body>
 </html>
